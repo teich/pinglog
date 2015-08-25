@@ -6,7 +6,6 @@ function ping-time {
         echo $(ping -c 1 $1 | grep 'time=' | awk '{print $7}' | cut -f 2 -d '=')
 }
 
-now="$(date +%s)"
 ssid="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'
 )"
 uuid="$(ioreg -rd1 -c IOPlatformExpertDevice | awk '/IOPlatformUUID/ { split($0, line, "\""); printf("%s\n", line[4]); }')"
