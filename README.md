@@ -1,6 +1,6 @@
 # Ping Logger
 
-This is a trivial script that grabs some network information and send it up to a web logger.
+This is a trivial script that grabs some network information and send it [pinglog-server](https://github.com/teich/pinglog-server).
 
 I'm hoping that by collecting minute by minute ping times some patterns will emerge on network performance
 
