@@ -11,7 +11,8 @@ function ping-time {
 }
 
 now="$(date +%s)"
-ssid="$(networksetup -getairportnetwork en0 | cut -f 4 -d ' ')"
+ssid="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'
+)"
 uuid="$(ioreg -rd1 -c IOPlatformExpertDevice | awk '/IOPlatformUUID/ { split($0, line, "\""); printf("%s\n", line[4]); }')"
 gateway="$(netstat -rn | grep 'default' | awk '{print $2}')"
 
