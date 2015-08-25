@@ -1,10 +1,10 @@
 #!/bin/bash
 
-SBHOME=~/src/pinglog/shellbrato
-LBUSER=oren@teich.net
+#SBHOME=~/src/pinglog/shellbrato
+#LBUSER=oren@teich.net
 
-source .env
-source $SBHOME/shellbrato.sh
+#source .env
+#source $SBHOME/shellbrato.sh
 
 function ping-time {
         echo $(ping -c 1 $1 | grep 'time=' | awk '{print $7}' | cut -f 2 -d '=')
