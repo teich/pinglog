@@ -6,7 +6,7 @@ I'm hoping that by collecting minute by minute ping times some patterns will eme
 
 ## INSTALLATION
 
-    $ sudo ln -s pingit.sh /usr/local/bin/pingit.sh
+    $ sudo cp pingit.sh /usr/local/bin/pingit.sh
     $ sudo chmod 755 /usr/local/bin/pingit.sh
-    $ ln -s com.oren.pinglog.plist ~/Library/LaunchAgents
+    $ cp com.oren.pinglog.plist ~/Library/LaunchAgents
     $ launchctl load ~/Library/LaunchAgents/com.oren.pinglog.plist
