@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export LOG_URL="https://enigmatic-ocean-6979.herokuapp.com/api/logs"
+LOG_URL="https://enigmatic-ocean-6979.herokuapp.com/api/logs"
 
 function ping-time {
         echo $(ping -c 1 $1 | grep 'time=' | awk '{print $7}' | cut -f 2 -d '=')
