@@ -18,6 +18,6 @@ gateway="$(netstat -rn | grep 'default' | awk '{print $2}')"
 google_ping=$(ping-time 8.8.8.8)
 gateway_ping=$(ping-time $gateway)
 
-echo "$now, $ssid, $google_ping, $uuid, $gateway_ping"
+echo "$now, $uuid, $ssid, $gateway_ping, $google_ping"
 
 # sendGauge "${now}||google_ping||${ping}||${ssid}"
